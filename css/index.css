@@ -5,3 +5,135 @@
     box-sizing: border-box;
 }
 
+
+html {
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--body-bg); /* Dark background for the entire page */
+    color: var(--text-color); /* White text color by default */
+    padding-top: var(--nav-height); /* Space for fixed navbar */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherits color from parent element */
+}
+
+/* Root Variables */
+:root {
+    --main-color: #c0392b; /* Accent color */
+    --body-bg: #181616; /* Background color */
+    --box-bg: #221f1f; /* Secondary background color for elements */
+    --text-color: #ffffff; /* White text color */
+    --nav-height: 60px; /* Height of the navbar */
+    --space-top: 30px; /* Spacing for margin and padding */
+}
+
+/* Container setup */
+.container {
+    max-width: 1920px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+/* Navigation Styles */
+.nav-wrapper {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000; /* Dark background for navbar */
+    z-index: 99;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav-height);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--main-color); /* Logo color */
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin-left: 30px; /* Spacing between menu items */
+}
+
+.nav-menu a {
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text for navigation links */
+}
+
+.nav-menu a:hover {
+    color: var(--main-color); /* Hover effect changes text to accent color */
+}
+
+.hamburger-menu {
+    display: none; /* Initially hidden, displayed in responsive design */
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+.main-color{
+    color: white;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background-color: var(--text-color);
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    transition: transform 0.4s ease;
+}
+
+.hamburger::before {
+    content: '';
+    top: -10px;
+}
+
+.hamburger::after {
+    content: '';
+    bottom: -10px;
+}
+
+/* Toggle hamburger menu into a cross */
+.hamburger-menu.active .hamburger {
+    background: transparent;
+}
+
+.hamburger-menu.active .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger-menu.active .hamburger::after {
+    transform: rotate(-135deg);
+    bottom: 0;
+}
+
+/* Styling for responsive design */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none; /* Hide nav menu in mobile view */
+    }
+}
