@@ -60,3 +60,31 @@ document.addEventListener("DOMContentLoaded", function () {
         hamburgerMenu.classList.toggle('active');
     });
 });
+
+
+/*Featured Section START*/
+
+
+
+/*Featured Section START*/
+$(document).ready(function() {
+    $('.featured-carousel').owlCarousel({
+        // Owl Carousel options
+        loop: true, // Enable loop to make the carousel infinite
+        nav: true, // Enable navigation arrows
+        navText: ["<i class='bx bx-chevron-left'></i>", "<i class='bx bx-chevron-right'></i>"], // Customize navigation arrow icons
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:6
+            }
+        }
+    });
+});
+/*Featured Section END*/
+
