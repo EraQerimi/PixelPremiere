@@ -93,6 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+     // Dëgjuesi për ndryshime në inputin e kërkimit
+     searchInput.addEventListener('input', filterMovies);
+
+     // Paraqit filmat fillestarë
+     filterMovies();
    
 });
 
