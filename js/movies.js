@@ -79,6 +79,20 @@ document.addEventListener('DOMContentLoaded', () => {
         displayMovies(filteredMovies);
     };
 
+    // Funksioni për të shfaqur filmat
+    const displayMovies = (filteredMovies) => {
+        moviesContainer.innerHTML = '';
+        filteredMovies.forEach(movie => {
+            const movieElement = document.createElement('div');
+            movieElement.classList.add('movie');
+            movieElement.innerHTML = `
+                <img src="${movie.image}" alt="${movie.title}">
+                <h3>${movie.title}</h3>
+            `;
+            moviesContainer.appendChild(movieElement);
+        });
+    };
+
    
 });
 
