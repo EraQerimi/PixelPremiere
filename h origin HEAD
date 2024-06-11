@@ -1,0 +1,59 @@
+[33mcommit d0608273b34aefc3719ad68722f443f353c4312f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: DeaMustafa <120095678+DeaMustafa@users.noreply.github.com>
+Date:   Tue Jun 11 21:49:16 2024 +0200
+
+    about us part
+
+[33mcommit f149239e49fd6a6c58a31d1041096ba9652f0b43[m
+Author: EraQerimi <eraqeriimi@gmail.com>
+Date:   Tue Jun 11 14:02:37 2024 +0200
+
+    Adjust scale of movie reels in PixiJS script
+
+[33mcommit 44e111308644eda69977a24de8984a8feb1a98e8[m
+Author: DeaMustafa <120095678+DeaMustafa@users.noreply.github.com>
+Date:   Mon Jun 3 12:55:33 2024 +0200
+
+    top rated movies part
+
+[33mcommit 849b69dc32c2736dd87b658aa765a9cf559fa3db[m
+Author: DeaMustafa <120095678+DeaMustafa@users.noreply.github.com>
+Date:   Mon Jun 3 12:53:10 2024 +0200
+
+    trending movies part
+
+[33mcommit 96ee7b3f2305cbd83fd5305251e614fe8ab059f8[m
+Author: DeaMustafa <120095678+DeaMustafa@users.noreply.github.com>
+Date:   Mon Jun 3 12:50:30 2024 +0200
+
+    now playing movies part
+
+[33mcommit 5eca933aaac502266e47f83cd3b231ae327340a7[m
+Author: EraQerimi <eraqeriimi@gmail.com>
+Date:   Sat Jun 1 23:53:10 2024 +0200
+
+    Improved navbar, added hover effect, adjusted cursor, and made tablet responsive
+
+[33mcommit 540c889a9c0e4f966ab29857c1e67cf4a356cce4[m
+Author: EraQerimi <120095610+EraQerimi@users.noreply.github.com>
+Date:   Mon May 20 16:52:36 2024 +0200
+
+    Set up navbar and update design
+
+[33mcommit 639ee094d0407dc02162cbf5db4ccf6d3f86efb2[m
+Author: DeaMustafa <120095678+DeaMustafa@users.noreply.github.com>
+Date:   Mon May 20 16:11:41 2024 +0200
+
+    nav bar starter
+
+[33mcommit 7241ae5f5ff7cbc629e7a766010aa759a6054322[m
+Author: EraQerimi <120095610+EraQerimi@users.noreply.github.com>
+Date:   Wed May 8 12:12:53 2024 +0200
+
+    linking css/js
+
+[33mcommit f8a60f50af96de1f28ca562d4ee3a4d1cda48fc5[m
+Author: EraQerimi <120095610+EraQerimi@users.noreply.github.com>
+Date:   Sun Apr 7 20:51:19 2024 +0200
+
+    Create README.md
