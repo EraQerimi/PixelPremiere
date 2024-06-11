@@ -253,6 +253,9 @@ span.main-color{
     background-color: #a93226;
 }
 
+
+
+
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     .nav {
