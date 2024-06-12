@@ -158,6 +158,48 @@
     <footer>
       <script src="js/index.js" type="module"></script>
       <script src="js/series.js" type="module"></script>
+       <!-- PIXI-JS -->
+    <script>
+      const app = new PIXI.Application({
+        width: window.innerWidth,
+        height: window.innerHeight,
+        transparent: true
+      });
+      document.getElementById('pixi-container').appendChild(app.view);
+      
+      // Load the video
+      const videoTexture = PIXI.Texture.from('assets/Scarface.mp4');
+      const videoSprite = new PIXI.Sprite(videoTexture);
+      
+      videoSprite.width = window.innerWidth;
+      videoSprite.height = window.innerHeight;
+      videoSprite.anchor.set(0.5);
+      videoSprite.position.set(app.screen.width / 2, app.screen.height / 2);
+      
+      app.stage.addChild(videoSprite);
+      
+      // Play video after user interaction
+      const playLogo = document.getElementById('play-logo');
+      playLogo.addEventListener('click', () => {
+        const video = videoTexture.baseTexture.resource.source;
+      
+        if (video.paused) {
+          video.play();
+          playLogo.innerHTML = '<i class="far fa-pause-circle"></i>';
+        } else {
+          video.pause();
+          playLogo.innerHTML = '<i class="far fa-play-circle"></i>';
+        }
+      });
+      
+      // Update the size when the window resizes
+      window.addEventListener('resize', () => {
+        app.renderer.resize(window.innerWidth, window.innerHeight);
+        videoSprite.width = window.innerWidth;
+        videoSprite.height = window.innerHeight;
+        videoSprite.position.set(app.screen.width / 2, app.screen.height / 2);
+      });
+      </script>
       
     </footer>
   </body>
