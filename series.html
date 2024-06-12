@@ -30,6 +30,16 @@
 
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/series.css" />
+    <!-- PIXI.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.8/browser/pixi.min.js"></script>
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRJ3mK5I4glfQbD5nrhjtvuDA5x6A9ed6GfduB+He"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- NAV -->
@@ -97,5 +107,57 @@
       </div>
     </div>
     <!-- END NAV -->
+
+    <!-- banner section -->
+    <div class="bg-img">
+      <div class="banner-container">
+        <div id="pixi-container" class="video-container"></div>
+        <div class="banner-text">
+          <h1 id="movie-text">Scarface</h1>
+          <p id="movie-pretext">Exclusive Trailer HD</p>
+          <p id="movie-year">
+            2016 <span> <i class="fas fa-star"></i> 7.6</span>
+          </p>
+        </div>
+        <div class="play-logo" id="play-logo" style="color: #c0392b">
+          <i class="far fa-play-circle"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- movie card sections -->
+    <div class="movie-card-row">
+      <div class="movie-nav-link">
+        <nav>
+          <ul>
+            <li><a href="" style="font-size: 30px">Trending</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <select name="" id="">
+                <option value="">
+                  <a href="" style="font-size: 30px">Top Rated</a>
+                </option>
+                <option value="">
+                  <a href="" style="font-size: 30px">Popular</a>
+                </option>
+                <option value="">
+                  <a href="index.html" style="font-size: 30px">Upcoming</a>
+                </option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="movie-img-container" id="movie-link">
+        <!-- JAVASCRIPT CONTENT FROM TMDB API -->
+      </div>
+    </div>
+    <footer>
+      <script src="js/index.js" type="module"></script>
+      <script src="js/series.js" type="module"></script>
+    </footer>
   </body>
 </html>
