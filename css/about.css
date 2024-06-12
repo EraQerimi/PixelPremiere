@@ -112,6 +112,44 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Style for custom cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color); /* Default cursor color */
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  transform: translate(-50%, -50%);
+}
+
+/* Style for cursor ring */
+.cursor-ring {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--main-color); /* Default ring color */
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9998;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  animation: pulse-ring 2s infinite;
+}
+
+/* Animation for cursor ring */
+@keyframes pulse-ring {
+  0% {
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(-50%, -50%) scale(1.5);
+      opacity: 0;
+  }
+}
 
 
 

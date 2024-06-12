@@ -1,15 +1,18 @@
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #f4f4f4;
+    background: linear-gradient(to right, #ffffff, #000000, #c0392b); /* Gradienti i sfondit */
+    color: #fff; /* Ngjyra e tekstit */
+
 }
 
 main {
-    margin-top: 80px; /* Adjust this value based on the height of your navbar */
+    margin-top: 60px; /* Rregullo sipas nevojës */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0); /* Sfondi transparent me një gjysmë të bardhë */
+    border-radius: 20px; /* Rrethimi i këndëve */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Hijeshkaku i lehtë */
 }
 
 .controls {
@@ -26,10 +29,11 @@ main {
 #search-input {
     padding: 10px;
     font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid #555;
-    background-color: #333;
-    color: #f4f4f4;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(to right, #f9d976, #f39f86); /* Gradienti i inputit të kërkimit */
+
+    color: #333;
 }
 
 #search-input::placeholder {
@@ -37,9 +41,8 @@ main {
 }
 
 .movies {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
     background-color: #1b1b1b;
@@ -51,7 +54,7 @@ main {
     background-color: #2c2c2c;
     border: 1px solid #444;
     border-radius: 10px;
-    width: 150px;
+    overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s, box-shadow 0.2s;
     text-align: center;
@@ -59,9 +62,9 @@ main {
 
 .movie img {
     width: 100%;
+    height: 300px;
+    object-fit: cover;
     border-bottom: 1px solid #444;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 .movie h3 {
@@ -74,7 +77,7 @@ main {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-/* Custom cursor */
+
 .custom-cursor {
     width: 20px;
     height: 20px;
@@ -168,11 +171,60 @@ body:hover .cursor-ring {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 @keyframes rotate-letter {
     0% {
         transform: rotateY(0deg);
     }
     100% {
         transform: rotateY(360deg);
+    }
+}
+/* Style for custom cursor */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-color); /* Default cursor color */
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    transform: translate(-50%, -50%);
+}
+
+/* Style for cursor ring */
+.cursor-ring {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--main-color); /* Default ring color */
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9998;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    animation: pulse-ring 2s infinite;
+}
+
+/* Animation for cursor ring */
+@keyframes pulse-ring {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
     }
 }
